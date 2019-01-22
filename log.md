@@ -1,7 +1,9 @@
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 #### logistic regression
 
 
-- Ä¿±ê
+- ç›®æ ‡
 ```math
 Wx+b=0  
 ```
@@ -9,42 +11,42 @@ Wx+b=0
 ```math
 f(x)=\frac{1}{1+e^{-x}}
 ```
-- sigmodÇóµ¼    
+- sigmodæ±‚å¯¼    
 
 ```math
 f\prime(x)=\frac{e^{-x}}{(1+e^{-x})^{2}}=f(x)[1-f(x)]
 ```
-- sigmodÊµÏÖ
+- sigmodå®ç°
 ``` python
 def sig(x):
-    '''Sigmoidº¯Êı
+    '''Sigmoidå‡½æ•°
     input:  x(mat):feature * w
-    output: sigmoid(x)(mat):SigmoidÖµ
+    output: sigmoid(x)(mat):Sigmoidå€¼
     '''
     return 1.0 / (1 + np.exp(-x))
 ```
-- ÊäÈëxÊôÓÚÕıÀıµÄ¸ÅÂÊ
+- è¾“å…¥xå±äºæ­£ä¾‹çš„æ¦‚ç‡
 ```math
 P(y=1|X,W,b)=\sigma(WX+b)=\frac{1}{1+e^{-{(WX+b)}}}
 ```
-- ÊäÈëxÊôÓÚ¸ºÀıµÄ¸ÅÂÊ
+- è¾“å…¥xå±äºè´Ÿä¾‹çš„æ¦‚ç‡
 ```math
 P(y=1|X,W,b)=1-\sigma(WX+b)=\frac{e^{-{(WX+b)}}}{1+e^{-{(WX+b)}}}
 ```
-##### ËğÊ§º¯Êı
-- XÊôÓÚÀà±ğyµÄ¸ÅÂÊ
+##### æŸå¤±å‡½æ•°
+- Xå±äºç±»åˆ«yçš„æ¦‚ç‡
 
 ```math
 P(y|X,W,b)=\sigma(WX+b)^{y}(1-\sigma(WX+b))^{1-y}=
 ```
-- ¼«´óËÆÈ»·¨,ËÆÈ»º¯Êı
+- æå¤§ä¼¼ç„¶æ³•,ä¼¼ç„¶å‡½æ•°
 
 ```math
 L_{W,b}=\prod_{i=0}^m (h_{W,b}(X^{i}))^{y^{i}}(1-h_{W,b}(X^{i}))^{1-y^{i}}
 
 h_{W,b}(X^{i})=\sigma(WX^{i}+b)
 ```
-- ¼ÓÉÏlog,¸ººÅ
+- åŠ ä¸Šlog,è´Ÿå·
 
 
 
